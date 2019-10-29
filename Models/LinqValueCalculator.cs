@@ -7,10 +7,11 @@ namespace EssentialTools.Models
     {
         private IDiscountHelper discounter;
         private static int counter = 0;
+
         public LinqValueCalculator(IDiscountHelper discountParam)
         {
             discounter = discountParam;
-            System.Diagnostics.Debug.WriteLine(string.Format("Instance{0} created", ++counter));
+            System.Diagnostics.Debug.WriteLine($"Instance{++counter} created");
         }
 
         public decimal ValueProducts(IEnumerable<Product> products)
